@@ -16,6 +16,21 @@ angular.module('starter.controllers', [])
     image.src = imageData.indexOf('data:image') === 0 ? imageData : "data:image/jpeg;base64," + imageData
   }
   
+  
+  function callAdapter(){
+    var resourceRequest = new WLResourceRequest(
+    "/adapters/javaAdapter/resource/greet",
+    WLResourceRequest.GET
+    );
+    resourceRequest.setQueryParameter("name", "Carlos");
+    
+    resourceRequest.send().then(function(payload){
+      alert(payload.responseText);
+    },function(error){
+      alert('Connect FAIL'+ JSON.stringify(error));
+    });
+  }
+  
   function sendAnalytics(){
     console.log("Sending analytics");
     WL.Analytics.send().then(function(){
@@ -26,6 +41,7 @@ angular.module('starter.controllers', [])
   
 
   $scope.getPic = getPic;
+  $scope.callAdapter = callAdapter;
   $scope.sendAnalytics = sendAnalytics;
 })
 
