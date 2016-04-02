@@ -27,7 +27,7 @@ angular.module('starter.controllers', [])
     resourceRequest.send().then(function(payload){
       alert(payload.responseText);
     },function(error){
-      alert('Connect FAIL'+ JSON.stringify(error));
+     // alert('Connect FAIL'+ JSON.stringify(error));
     });
   }
   
