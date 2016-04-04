@@ -2,6 +2,13 @@ angular.module('starter.controllers', [])
 
   .controller('MfpCtrl', function($scope, MFPInit) {
 
+
+    MFPInit.then(function() {
+      WL.App.getServerUrl(function(url) {
+        $scope.serverurl = url;
+      });
+    });
+
     function getPic() {
       var image = navigator.camera.getPicture(onPic, null,
         {
@@ -94,7 +101,7 @@ angular.module('starter.controllers', [])
       LoginChallenge.handleFailure = function(error) {
         console.log("LoginChallenge.handleFailure");
       };
-      
+
 
       $rootScope.doLogin = function() {
         console.log('Submitting LoginData', $rootScope.loginData.username);
@@ -108,12 +115,12 @@ angular.module('starter.controllers', [])
         }, 3000, false, [Pass]);
         */
         LoginChallenge.submitChallengeAnswer({
-            'username': $rootScope.loginData.username,
-            'password': $rootScope.loginData.password
-          });
+          'username': $rootScope.loginData.username,
+          'password': $rootScope.loginData.password
+        });
 
       };
-      
+
 
 
 
