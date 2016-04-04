@@ -1,18 +1,31 @@
 <ion-view view-title="MFPF Test and Debug">
   <ion-content class="padding">
     <h2>Ionic + MFP</h2>
-    
+
     <button ng-click="getPic()" class="button button-block button-positive">
-      Get Picture
+      Get Picture (From MBS, Simulator, or Device)
     </button>
-    <div class="item item-image" >
-    <img id="myImage">
+    <div class="item item-image">
+      <img id="myImage">
     </div>
-    <button ng-click="callAdapter()" class="button button-block button-positive">
-      Call Adapter (default security scope)
+    
+    <button ng-click="greetAdapter()" class="button button-block button-positive">
+      Call Adapter (security scope default)
     </button>
+    <div id="resultGreet">
+    </div>
+    
+    <button ng-click="getBalance()" class="button button-block button-positive">
+      Call Adapter (security scope accessRestricted)
+    </button>
+    <div id="resultBalance">
+    </div>
+    
     <button ng-click="sendAnalytics()" class="button button-block button-positive">
-      Send Analytics
+      Send Analytics (From Simulator or Device)
+    </button>
+    <button ng-click="doLogout()" class="button button-block button-positive">
+      logout
     </button>
 
   </ion-content>
