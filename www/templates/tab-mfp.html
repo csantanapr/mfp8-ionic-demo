@@ -1,22 +1,19 @@
 <ion-view view-title="MFPF Test and Debug">
   <ion-content class="padding">
     <h2>Ionic + MFP</h2>
-    <p>
-    Simple App to show MFPF Tooling
-    </p>
     
-    <h2>
-      <button ng-click="getPic()">Get Picture</button>
-    </h2>
-    <div>
-      <img id="myImage" style="width: 100%" />
-    </h2>
-    <h2>
-      <button ng-click="callAdapter()">Call Adapter</button>
-    </h2>
-    <h2>
-      <button ng-click="sendAnalytics()">Send Analytics</button>
-    </h2>
+    <button ng-click="getPic()" class="button button-block button-positive">
+      Get Picture
+    </button>
+    <div class="item item-image" >
+    <img id="myImage">
+    </div>
+    <button ng-click="callAdapter()" class="button button-block button-positive">
+      Call Adapter
+    </button>
+    <button ng-click="sendAnalytics()" class="button button-block button-positive">
+      Send Analytics
+    </button>
 
   </ion-content>
 </ion-view>
