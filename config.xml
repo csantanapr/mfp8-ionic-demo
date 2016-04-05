@@ -1,62 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ibm.ionicmfp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:mfp="http://www.ibm.com/mobilefirst/cordova-plugin-mfp">
-  <name>IonicMFP</name>
-  <description>
+    <name>IonicMFP</name>
+    <description>
         An Ionic Framework and Cordova project.
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
+    <author email="you@example.com" href="http://example.com.com/">
       Your Name Here
     </author>
-  <content src="index.html"/>
-  <access origin="*"/>
-  <allow-navigation href="http://*/*"/>
-  <allow-navigation href="https://*/*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="android-minSdkVersion" value="16"/>
-  <preference name="BackupWebStorage" value="none"/>
-  <feature name="StatusBar">
-    <param name="ios-package" onload="true" value="CDVStatusBar"/>
-  </feature>
-  <mfp:android>
-    <mfp:sdkChecksum>3057835642</mfp:sdkChecksum>
-    <mfp:appChecksum>1040854690</mfp:appChecksum>
-    <mfp:security>
-      <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
-    </mfp:security>
-  </mfp:android>
-  <mfp:ios>
-    <mfp:sdkChecksum>1105666624</mfp:sdkChecksum>
-    <mfp:appChecksum>1488030249</mfp:appChecksum>
-    <mfp:security>
-      <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
-    </mfp:security>
-  </mfp:ios>
-  <mfp:windows>
-    <mfp:windows8>
-      <mfp:sdkChecksum>0</mfp:sdkChecksum>
-      <mfp:security>
-        <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
-      </mfp:security>
-    </mfp:windows8>
-    <mfp:windowsphone8>
-      <mfp:sdkChecksum>0</mfp:sdkChecksum>
-      <mfp:security>
-        <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
-      </mfp:security>
-    </mfp:windowsphone8>
-    <mfp:windows10>
-      <mfp:sdkChecksum>0</mfp:sdkChecksum>
-      <mfp:security>
-        <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
-      </mfp:security>
-    </mfp:windows10>
-    <mfp:appChecksum>0</mfp:appChecksum>
-  </mfp:windows>
-  <mfp:platformVersion>8.0.0.00-20160328-1416</mfp:platformVersion>
-  <mfp:clientCustomInit enabled="false"/>
-  <mfp:server runtime="mfp" url="http://mobilefoundation-3c-server.mybluemix.net:80"/>
-  <mfp:directUpdateAuthenticityPublicKey></mfp:directUpdateAuthenticityPublicKey>
-  <mfp:languagePreferences>en</mfp:languagePreferences>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="xwalkVersion" value="17+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <mfp:android>
+        <mfp:sdkChecksum>3057835642</mfp:sdkChecksum>
+        <mfp:appChecksum>2791816359</mfp:appChecksum>
+        <mfp:security>
+            <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+        </mfp:security>
+    </mfp:android>
+    <mfp:ios>
+        <mfp:sdkChecksum>1105666624</mfp:sdkChecksum>
+        <mfp:appChecksum>1467766135</mfp:appChecksum>
+        <mfp:security>
+            <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+        </mfp:security>
+    </mfp:ios>
+    <mfp:windows>
+        <mfp:windows8>
+            <mfp:sdkChecksum>0</mfp:sdkChecksum>
+            <mfp:security>
+                <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+            </mfp:security>
+        </mfp:windows8>
+        <mfp:windowsphone8>
+            <mfp:sdkChecksum>0</mfp:sdkChecksum>
+            <mfp:security>
+                <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+            </mfp:security>
+        </mfp:windowsphone8>
+        <mfp:windows10>
+            <mfp:sdkChecksum>0</mfp:sdkChecksum>
+            <mfp:security>
+                <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+            </mfp:security>
+        </mfp:windows10>
+        <mfp:appChecksum>0</mfp:appChecksum>
+    </mfp:windows>
+    <mfp:platformVersion>8.0.0.00-20160328-1416</mfp:platformVersion>
+    <mfp:clientCustomInit enabled="false" />
+    <mfp:server runtime="mfp" url="http://mobilefoundation-3c-server.mybluemix.net:80" />
+    <mfp:directUpdateAuthenticityPublicKey />
+    <mfp:languagePreferences>en</mfp:languagePreferences>
 </widget>
