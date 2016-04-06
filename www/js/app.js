@@ -90,7 +90,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/mfp');
 
 }).factory('MFPInit', function($q){
   /* Setup a Promise to allow code to run in other places anytime after MFP CLient SDK is ready
@@ -117,7 +117,54 @@ window.MFPClientDefer.promise.then(function wlCommonInit(){
   
   console.log('MobileFirst Client SDK Initilized');
   mfpMagicPreviewSetup();
+  MFPPush.initialize(
+       function(successResponse) {
+        WL.Logger.debug("Successfully intialized");
+        console.log("MFPPush Successfully intialized");
+        MFPPush.isPushSupported (
+              function(successResponse) {
+                  alert("Push Supported: " + successResponse);
+                      MFPPush.setOptions({
+                          ios: {
+                                  alert: true,
+                                  badge: true,
+                                  sound: true}
+                            }, function(){
+                              alert("success set options");
+                               MFPPush.registerDevice(
+                                    function(successResponse) {
+                                      alert("Successfully registered");
+                                      
+                                  }, function(failureResponse) {
+                                      alert("Failed to register");
+                                      console.log(failureResponse);
+                               });
+                            },function(){
+                                console.log("error set options")
+                            });
+                      
+                     
+                  
+              },
+              function(failureResponse) {
+                  alert("Failed to get push support status");
+              }
+        );
+        MFPPush.registerNotificationsCallback(notificationReceived);
+    }, function(failureResponse) {
+        alert("Failed to initialize");
+    });
  });
+ 
+function notificationReceived(message) {
+    obj = JSON.parse(message.payload);
+    alert("Push received",message.payload);
+    /*
+    alert("Alert: " + message.alert +
+            "\nID: " + obj.nid +
+            "\nPayload: " + message.payload );
+            */
+}; 
 
 function mfpMagicPreviewSetup(){
   var platform;

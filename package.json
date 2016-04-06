@@ -23,7 +23,8 @@
     "ionic-plugin-keyboard",
     "cordova-plugin-mfp",
     "cordova-plugin-camera",
-    "cordova-plugin-crosswalk-webview"
+    "cordova-plugin-crosswalk-webview",
+    "cordova-plugin-mfp-push"
   ],
   "cordovaPlatforms": []
 }
