@@ -26,5 +26,7 @@
     "cordova-plugin-crosswalk-webview",
     "cordova-plugin-mfp-push"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "ios"
+  ]
 }
