@@ -3,12 +3,13 @@
 ### TLDR; Demo Video:
 [![Ionic + MFPF8 Video click to play](video_preview.jpg)](https://www.youtube.com/watch?v=DlxZYxXszIw)
 
-### Install Tools
-
-## Setup a MobileFirst Platform Foundation 8 server 
+### Setup a MobileFirst Platform Foundation 8 server 
 
 - The easiest way to get a server running is using IBM Bluemix, there is a **Free** tier you can use
 - Go to the IBM Bluemix Catalog and create a [Mobile Foundation Service](https://new-console.ng.bluemix.net/catalog/services/mobile-foundation/)
+
+### Install Tools
+
 - Setup the Command Lines Tools:
 
 ```bash
