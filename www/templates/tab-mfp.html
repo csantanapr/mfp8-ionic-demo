@@ -25,8 +25,20 @@
     </button>
     
     <button ng-click="sendAnalytics()" class="button button-block button-positive">
-      Send Analytics (Simulator or Device)
+      send Analytics
     </button>
+    
+    <button ng-click="isPushSupported()" class="button button-block button-positive">
+      isPush Supported? {{pushSupported}}
+    </button>
+    <button ng-click="registerDevice()" class="button button-block button-positive">
+      registerDevice {{registerDevice}}
+    </button>
+    <button ng-click="getSubscriptions()" class="button button-block button-positive">
+      getSubscriptions {{subscriptions}}
+    </button>
+    Push Message:{{message | json}}
+    
     
 
   </ion-content>

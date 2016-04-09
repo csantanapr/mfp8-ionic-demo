@@ -117,43 +117,6 @@ window.MFPClientDefer.promise.then(function wlCommonInit(){
   
   console.log('MobileFirst Client SDK Initilized');
   mfpMagicPreviewSetup();
-  MFPPush.initialize(
-       function(successResponse) {
-        WL.Logger.debug("Successfully intialized");
-        console.log("MFPPush Successfully intialized");
-        MFPPush.isPushSupported (
-              function(successResponse) {
-                  alert("Push Supported: " + successResponse);
-                      MFPPush.setOptions({
-                          ios: {
-                                  alert: true,
-                                  badge: true,
-                                  sound: true}
-                            }, function(){
-                              alert("success set options");
-                               MFPPush.registerDevice(
-                                    function(successResponse) {
-                                      alert("Successfully registered");
-                                      
-                                  }, function(failureResponse) {
-                                      alert("Failed to register");
-                                      console.log(failureResponse);
-                               });
-                            },function(){
-                                console.log("error set options")
-                            });
-                      
-                     
-                  
-              },
-              function(failureResponse) {
-                  alert("Failed to get push support status");
-              }
-        );
-        MFPPush.registerNotificationsCallback(notificationReceived);
-    }, function(failureResponse) {
-        alert("Failed to initialize");
-    });
  });
  
 function notificationReceived(message) {

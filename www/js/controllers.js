@@ -1,3 +1,4 @@
+/// <reference path="plugins/cordova-plugin-mfp-push/typings/mfppush.d.ts"/>
 angular.module('starter.controllers', [])
 
   .controller('MfpCtrl', function($scope, MFPInit) {
@@ -7,6 +8,16 @@ angular.module('starter.controllers', [])
       WL.App.getServerUrl(function(url) {
         $scope.serverurl = url;
       });
+      if(typeof MFPPush !== 'undefined'){
+        MFPPush.initialize(
+          function(successResponse) {
+            WL.Logger.debug("Successfully intialized");
+            MFPPush.registerNotificationsCallback(notificationReceived);
+        }, function(failureResponse) {
+            alert("Failed to initialize");
+        });
+      }
+        
     });
 
     function getPic() {
@@ -69,12 +80,53 @@ angular.module('starter.controllers', [])
       });
 
     }
+    
+    function isPushSupported() {
+      MFPPush.isPushSupported (function (answer){
+        $scope.$apply(function () {
+            $scope.pushSupported = answer;
+        });
+      });
+    }
+
+    function registerDevice() {
+      MFPPush.registerDevice(function(){
+        $scope.$apply(function () {
+            $scope.registerDevice = "Yay!";
+        });
+      });
+      
+    }
+    function getSubscriptions(){
+      MFPPush.getSubscriptions(
+        function(subscriptions) {
+            $scope.$apply(function () {
+            $scope.subscriptions = subscriptions;
+        });
+         }
+      );
+    }
+    
+    function notificationReceived(message){
+      $scope.$apply(function () {
+            message.payload = JSON.parse(message.payload);
+            $scope.message = message;
+            if(message.alert && message.alert.body){
+              alert(message.alert.body);
+            } else if (message.alert){
+              alert(message.alert);
+            }
+        });
+    }
 
 
     $scope.getPic = getPic;
     $scope.greetAdapter = greetAdapter;
     $scope.getBalance = getBalance;
     $scope.sendAnalytics = sendAnalytics;
+    $scope.isPushSupported = isPushSupported;
+    $scope.registerDevice = registerDevice;
+    $scope.getSubscriptions = getSubscriptions;
   })
 
 
