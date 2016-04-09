@@ -10,6 +10,7 @@
 - The easiest way to get a server running is using IBM Bluemix, there is a **Free** tier you can use
 - Go to the IBM Bluemix Catalog and create a [Mobile Foundation Service](https://new-console.ng.bluemix.net/catalog/services/mobile-foundation/)
 - Setup the Command Lines Tools:
+
 ```bash
 $ npm install -g mfpdev-cli  ionic@1.x cordova gulp-cli ios-deploy
 $ android --help
@@ -81,7 +82,7 @@ $ mfpdev help app config
 - Add a server profile `bluemix` for a remote server using the real values from IBM Bluemix
 
 ```bash
-$ mfpdev "mfpdev server add bluemix --url http://mobilefoundation-2u-server.mybluemix.net:80 --login admin --password ***** --setdefault"
+$ mfpdev server add bluemix --url http://mobilefoundation-2u-server.mybluemix.net:80 --login admin --password ***** --setdefault
 ```
 
 - If you have a mfp server running on localhost verify with the CLI
