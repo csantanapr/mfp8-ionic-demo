@@ -20,7 +20,7 @@ $ javac -version (1.7+)
 $ xcodebuild --help
 ```
 
-### How to use
+### How to use the sample code
 
 - Use Cordova CLI Template to download
 - Use a unique App ID, App Name, App Path `cordova create PATH ID NAME --template TEMPLATE`
