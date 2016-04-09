@@ -1,4 +1,4 @@
-##Demo of Ionic App enhanced with MobileFirst Platform Foundation 8 (MFP8)
+##Ionic + MobileFirst Platform Foundation 8.0 (MFP8)
 
 ### TLDR; Demo Video:
 [![Ionic + MFPF8 Video click to play](video_preview.jpg)](https://www.youtube.com/watch?v=DlxZYxXszIw)
