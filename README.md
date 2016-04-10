@@ -52,7 +52,7 @@ $ APP=mfp8-app; cordova create ${APP} com.example.myapp Demo --template https://
 $ ionic platform add ios@latest
 $ ionic platform add android@latest
 ```
-_Note_ : If having problems with Android check platforms/android/AndroidManifest.xml that the `<application>` elements contains the attribute `android:name="com.ibm.MFPApplication"` if not present added the attribute
+_Note_ : If having problems with Android check platforms/android/AndroidManifest.xml that the `<application>` elements contains the attribute `android:name="com.ibm.MFPApplication"` if not present add the attribute
 
 - Use `ionic` cli to emulate and run
 
