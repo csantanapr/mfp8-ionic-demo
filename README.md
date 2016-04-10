@@ -103,8 +103,8 @@ $ mfpdev app register bluemix
 - Switch back and forth the default server for the App
 
 ```bash
-$ mfpdev app config local 
-$ mfpdev app config bluemix
+$ mfpdev app config server local 
+$ mfpdev app config server bluemix
 ```
 
 - Always propagate changes for mfp configuration from config.xml after register or config
