@@ -13,7 +13,7 @@
 - Setup the Command Lines Tools:
 
 ```bash
-$ npm install -g mfpdev-cli  ionic@1.x cordova gulp-cli ios-deploy
+$ npm install -g mfpdev-cli  ionic@1.x cordova gulp-cli bower ios-deploy
 $ android --help
 $ adb version
 $ javac -version (1.7+)
@@ -35,23 +35,24 @@ $ cordova create mfp8-app com.example.myapp Demo  --template https://github.com/
 ```bash
 $ cd mfp8-app/
 $ npm install
+$ rm -rf .git/
 ```
 
 or in one single command (Linux, Mac)
 
 ```bash
-$ APP=mfp8-app; cordova create ${APP} com.example.myapp Demo --template https://github.com/csantanapr/mfp8-ionic-demo.git && cd ${APP} && npm install
+$ APP=mfp8-app; cordova create ${APP} com.example.myapp Demo --template https://github.com/csantanapr/mfp8-ionic-demo.git && cd ${APP} && npm install && rm -rf .git/
 ````
 ### How to use the Ionic CLI
 
-- Use `ionic` cli to add additional platforms and plugins
-- Sample App already defines in config.xml the plugins used in the demo, they get install when you add the platform
+- Use `ionic` cli to add additional platforms and optional plugins
+- Sample App already defines in config.xml most of the plugins from the demo, they get installed when you add the platform
 
 ```bash
 $ ionic platform add ios@latest
 $ ionic platform add android@latest
-$ ionic plugin add cordova-plugin-mfp-jsonstore
 ```
+_Note_ : If having problems with Android check platforms/android/AndroidManifest.xml that the `<application>` elements contains the attribute `android:name="com.ibm.MFPApplication"` if not present added the attribute
 
 - Use `ionic` cli to emulate and run
 

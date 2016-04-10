@@ -4,13 +4,19 @@
   <description>
         Demo App to show how to use Ionic 1.x and MobileFirst Platform Foundation 8.0 (MFPF8)
     </description>
-  <author email="@csantanapr" href="https://twitter.com/csantanapr">
+  <author email="dev@example.com" href="https://twitter.com/csantanapr">
       Carlos Santana
     </author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-navigation href="http://*/*"/>
   <allow-navigation href="https://*/*"/>
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -18,22 +24,18 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
-  <preference name="xwalkVersion" value="17+"/>
-  <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect"/>
-  <preference name="xwalkMode" value="embedded"/>
-  <preference name="xwalkMultipleApk" value="true"/>
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
   <mfp:android>
-    <mfp:sdkChecksum>3057835642</mfp:sdkChecksum>
+    <mfp:sdkChecksum>209521667</mfp:sdkChecksum>
     <mfp:appChecksum>2684129891</mfp:appChecksum>
     <mfp:security>
       <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
     </mfp:security>
   </mfp:android>
   <mfp:ios>
-    <mfp:sdkChecksum>1105666624</mfp:sdkChecksum>
+    <mfp:sdkChecksum>453695891</mfp:sdkChecksum>
     <mfp:appChecksum>1474486619</mfp:appChecksum>
     <mfp:security>
       <mfp:testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
@@ -60,12 +62,14 @@
     </mfp:windows10>
     <mfp:appChecksum>0</mfp:appChecksum>
   </mfp:windows>
-  <mfp:platformVersion>8.0.0.00-20160328-1416</mfp:platformVersion>
+  <mfp:platformVersion>8.0.0.00-20160328-0234</mfp:platformVersion>
   <mfp:clientCustomInit enabled="false"/>
   <mfp:server runtime="mfp" url="http://mobilefoundation-2u-server.mybluemix.net:80"/>
   <mfp:directUpdateAuthenticityPublicKey></mfp:directUpdateAuthenticityPublicKey>
   <mfp:languagePreferences>en</mfp:languagePreferences>
   <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57"/>
     <icon height="114" src="resources/ios/icon/icon@2x.png" width="114"/>
     <icon height="40" src="resources/ios/icon/icon-40.png" width="40"/>
@@ -94,6 +98,7 @@
     <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320"/>
   </platform>
   <platform name="android">
+    <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png"/>
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png"/>
     <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png"/>
@@ -120,10 +125,8 @@
   <plugin name="cordova-plugin-globalization"/>
   <plugin name="cordova-plugin-mfp" spec="~8.0"/>
   <plugin name="cordova-plugin-mfp-push" spec="~8.0"/>
-  <plugin name="cordova-plugin-okhttp"/>
   <plugin name="cordova-plugin-splashscreen"/>
   <plugin name="cordova-plugin-statusbar"/>
   <plugin name="cordova-plugin-whitelist"/>
   <plugin name="ionic-plugin-keyboard"/>
-  <plugin name="cordova-plugin-crosswalk-webview" spec="~1.6"/>
 </widget>
