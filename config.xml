@@ -120,13 +120,11 @@
   </platform>
   <plugin name="cordova-plugin-camera"/>
   <plugin name="cordova-plugin-console"/>
-  <plugin name="cordova-plugin-device"/>
-  <plugin name="cordova-plugin-dialogs"/>
-  <plugin name="cordova-plugin-globalization"/>
-  <plugin name="cordova-plugin-mfp" spec="~8.0"/>
-  <plugin name="cordova-plugin-mfp-push" spec="~8.0"/>
   <plugin name="cordova-plugin-splashscreen"/>
   <plugin name="cordova-plugin-statusbar"/>
   <plugin name="cordova-plugin-whitelist"/>
   <plugin name="ionic-plugin-keyboard"/>
+  <plugin name="cordova-plugin-mfp" spec="~8.0"/>
+  <plugin name="cordova-plugin-mfp-push" spec="~8.0"/>
+
 </widget>
