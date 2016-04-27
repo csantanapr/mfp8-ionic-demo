@@ -53,6 +53,24 @@ angular.module('starter.controllers', [])
           document.getElementById("resultGreet").innerHTML = "Failed to call adapter.";
         });
     }
+    
+    function postSlack() {
+      var resourceRequest = new WLResourceRequest(
+        "/adapters/slack//postSlack",
+        WLResourceRequest.GET
+      );
+      resourceRequest.setQueryParameter("params", "['Hello From Ionic MFP']");
+
+      resourceRequest.send().then(
+        function(response) {
+          WL.Logger.debug("Adapter response: " + response.responseText);
+          //document.getElementById("postSlack").innerHTML = "Adapter said: " + response.responseText;
+        },
+        function(response) {
+          WL.Logger.debug("Failed to call adapter: " + JSON.stringify(response));
+          //document.getElementById("postSlack").innerHTML = "Failed to call adapter.";
+        });
+    }
 
     function getBalance() {
       var resourceRequest = new WLResourceRequest("/adapters/ResourceAdapter/balance",
@@ -127,6 +145,7 @@ angular.module('starter.controllers', [])
     $scope.isPushSupported = isPushSupported;
     $scope.registerDevice = registerDevice;
     $scope.getSubscriptions = getSubscriptions;
+    $scope.postSlack = postSlack;
   })
 
 
