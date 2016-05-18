@@ -19,9 +19,14 @@
     </button>
     <div id="resultBalance">
     </div>
+    
+    
+    <!-- 
     <button ng-click="postSlack()" class="button button-block button-positive">
       Call Serverless OpenWhisk
     </button>
+    -->
+    
 
     <button ng-click="doLogout()" class="button button-block button-positive">
       logout
@@ -31,12 +36,14 @@
       send Analytics
     </button>
     
+    
+     <button ng-click="registerDevice()" class="button button-block button-positive">
+      registerDevice {{registerDevice}}
+    </button>
     <button ng-click="isPushSupported()" class="button button-block button-positive">
       isPush Supported? {{pushSupported}}
     </button>
-    <button ng-click="registerDevice()" class="button button-block button-positive">
-      registerDevice {{registerDevice}}
-    </button>
+ 
     <button ng-click="getSubscriptions()" class="button button-block button-positive">
       getSubscriptions {{subscriptions}}
     </button>
