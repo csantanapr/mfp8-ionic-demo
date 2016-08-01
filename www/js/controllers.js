@@ -156,7 +156,7 @@ angular.module('starter.controllers', [])
     var securityCheckName = 'UserLogin';
 
     MFPInit.then(function() {
-      LoginChallenge = new WL.Client.createWLChallengeHandler(securityCheckName);
+      LoginChallenge = new WL.Client.createSecurityCheckChallengeHandler(securityCheckName);
 
       LoginChallenge.securityCheckName = securityCheckName;
 
